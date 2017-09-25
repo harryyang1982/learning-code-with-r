@@ -9,15 +9,36 @@ gc
 class(gc)
 
 cen <- as.numeric(gc)
+class(cen)
+cen
 
 map <- get_googlemap(center=cen)
+map2 <- get_googlemap(center=c(gc[[1]], gc[[2]]))
 ggmap(map)
-
-
-map2 <- get_googlemap(center=cen, maptype="roadmap")
 ggmap(map2)
 
+
+map3 <- get_googlemap(center=c(gc[[1]], gc[[2]]), maptype="roadmap")
+ggmap(map3)
+
 # 주소지 가지고 지도 출력
+
+gc <- geocode(enc2utf8("충청북도 단양군"))
+gc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 gc <- geocode(enc2utf8("충청북도 단양군"))
 cen <- as.numeric(gc)
